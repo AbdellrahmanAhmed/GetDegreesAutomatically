@@ -4,7 +4,8 @@ import xlsxwriter
 import time
 
 web = webdriver.Chrome('C:\Program Files\Google\Chrome\Application\chromedriver.exe')
-web.get('http://195.246.39.39/misnatega/MainPage.aspx')
+#ضع الرابط في الأسفل
+web.get('')
 workbook = xlsxwriter.Workbook('درجات دفعتي.xlsx')
 worksheet = workbook.add_worksheet()
 
@@ -52,22 +53,10 @@ option6.click()
 
 time.sleep(1)
 
-# SeatNumTextBox = web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_SeatNumTextBox"]')
-# SeatNumTextBox.send_keys(Num)
 
-# SearchButton= web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_SearchButton"]')
-# SearchButton.click()
+#أول رقم جلوس هنا
+Num = 
 
-# time.sleep(1)
-
-# Button1 = web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_StudentsRep_ctl00_Button1"]')
-# Button1.click()
-
-# time.sleep(1)
-
-# web.back()
-
-Num = 47002
 A = 2
 B = 2
 C = 2
@@ -79,7 +68,8 @@ H = 2
 I = 2
 
 try:
-    while Num < 47125:
+    #  أخر رقم جلوس + 1
+    while Num < :
         SeatNumTextBox = web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_SeatNumTextBox"]')
         # time.sleep(1)
 
@@ -98,11 +88,6 @@ try:
 
         Button1 = web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_StudentsRep_ctl00_Button1"]')
         Button1.click()
-
-        # time.sleep(1)
-
-        # web.save_screenshot('C:\Users\Abdel\Pictures\Screenshots\'+ str(Num) +'.png')
-        # web.get_screenshot_as_file(str(Num) + ".png")
 
         Concrete = web.find_element_by_xpath('//*[@id="aspnetForm"]/div[3]/div[2]/div/div[1]/table/tbody/tr[2]/td[2]')
         Sanitary = web.find_element_by_xpath('//*[@id="aspnetForm"]/div[3]/div[2]/div/div[1]/table/tbody/tr[3]/td[2]')
@@ -170,10 +155,7 @@ except:
         Button1 = web.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_StudentsRep_ctl00_Button1"]')
         Button1.click()
 
-        # time.sleep(1)
-
-        # web.save_screenshot('C:\Users\Abdel\Pictures\Screenshots\'+ str(Num) +'.png')
-        # web.get_screenshot_as_file(str(Num) + ".png")
+       
 
         Concrete = web.find_element_by_xpath('//*[@id="aspnetForm"]/div[3]/div[2]/div/div[1]/table/tbody/tr[2]/td[2]')
         Sanitary = web.find_element_by_xpath('//*[@id="aspnetForm"]/div[3]/div[2]/div/div[1]/table/tbody/tr[3]/td[2]')
